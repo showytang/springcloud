@@ -1,0 +1,19 @@
+server:
+  port: 9002
+spring:
+  jpa:
+    database: MySql
+    show-sql: true
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/myschool?useUnicode=true&characterEncoding=utf-8&allowMutilQueries=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: clazz-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+  instance:
+    prefer-ip-address: true
